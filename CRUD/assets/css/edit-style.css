@@ -1,0 +1,83 @@
+body {
+    background-image: linear-gradient(to right, rgba(0,0,9,255),rgba(143,1,1,255));
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+  } 
+
+header{
+    text-align: center;
+}
+
+header img{
+    width: 15%;
+}
+
+div{
+    text-align: center;
+    padding-top: 2%;
+}
+nav {
+    padding: 1%;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: rgba(101,104,114,255);
+  }
+
+  #edit {
+    padding: 60px 0;
+  }
+  
+  #edit h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+  }
+  
+  #edit form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #edit .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #edit .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+  
+  #edit .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background-color: rgba(143,1,1,255);
+    border: none;
+  }

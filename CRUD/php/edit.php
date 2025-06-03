@@ -5,6 +5,8 @@ include 'db.php';
 $id = $_GET['id'];
 $proyecto = $conn->query("SELECT * FROM proyectos WHERE id=$id")->fetch_assoc();
 
+# Verificación de existencia de datos
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $titulo = $_POST['titulo'];
   $descripcion = $_POST['descripcion'];
@@ -18,6 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $img_sql = "";
   }
+
+# Envio de datos a la base de datos
 
   $sql = "UPDATE proyectos SET titulo='$titulo', descripcion='$descripcion', url_github='$url_github', url_produccion='$url_produccion' $img_sql WHERE id=$id";
   $conn->query($sql);

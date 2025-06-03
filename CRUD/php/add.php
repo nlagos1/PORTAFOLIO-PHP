@@ -2,6 +2,8 @@
 include 'auth.php';
 include 'db.php';
 
+# Envio de datos al servidor mediante post
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $titulo = $_POST['titulo'];
   $descripcion = $_POST['descripcion'];
@@ -12,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $tmp = $_FILES['imagen']['tmp_name'];
   move_uploaded_file($tmp, "../uploads/$imagen");
 
-  // Preparar la consulta segura
+# Preparar la consulta segura
+
   $stmt = $conn->prepare("INSERT INTO proyectos (titulo, descripcion, url_github, url_produccion, imagen) VALUES (?, ?, ?, ?, ?)");
   $stmt->bind_param("sssss", $titulo, $descripcion, $url_github, $url_produccion, $imagen);
   $stmt->execute();

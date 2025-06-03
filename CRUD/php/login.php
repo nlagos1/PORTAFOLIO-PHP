@@ -6,8 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
   $password = md5($_POST['password']);
 
+# Verificación de credenciales en el servidor  
+
   $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
   $result = $conn->query($sql);
+
+# Si son validos, redirije a Index.php
 
   if ($result->num_rows === 1) {
     $_SESSION['user'] = $username;
